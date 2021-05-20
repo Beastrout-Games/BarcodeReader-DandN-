@@ -7,7 +7,7 @@
  * @param vec pointer to vector struct variable
  * @param initialCapacity initial number of elements in the vector
  */
-void vectorInit(Vector *vec, int initialCapacity)
+void vectorInit(Stack *vec, int initialCapacity)
 {
   vec->capacity = initialCapacity;
   vec->size = 0;
@@ -20,7 +20,7 @@ void vectorInit(Vector *vec, int initialCapacity)
  * @param v pointer of type struct vector
  * @return returns curent number of elements
  */
-int vectorGetSize(Vector *v)
+int vectorGetSize(Stack *v)
 {
   return v->size;
 }
@@ -32,7 +32,7 @@ int vectorGetSize(Vector *v)
  * @return true if it's empty 
  * @return false if elemts are available
  */
-bool vectorIsEmpty(Vector *vec)
+bool vectorIsEmpty(Stack *vec)
 {
   return vec->size == 0;
 }
@@ -45,9 +45,9 @@ bool vectorIsEmpty(Vector *vec)
  * @param vec pointer to struct from type vector
  * @param capacity maximum number of elements in the vector
  */
-void vectorResize(Vector *vec, size_t capacity)
+void vectorResize(Stack *vec, size_t capacity)
 {
-  void **items = realloc(vec->items, sizeof(void *) * capacity);
+  char *items = realloc(vec->items, sizeof(char *) * capacity);
   if (items)
   {
     vec->items = items;
@@ -66,7 +66,7 @@ void vectorResize(Vector *vec, size_t capacity)
  * @param vec pointer to struct from type vector
  * @param item element
  */
-void vectorPush(Vector *vec, void *item)
+void vectorPush(Stack *vec, void *item)
 {
   if (vec->capacity == vec->size)
   {
@@ -83,7 +83,7 @@ void vectorPush(Vector *vec, void *item)
  * @param idx ship index
  * @param item element array pointer
  */
-void vectorSet(Vector *vec, size_t idx, void *item)
+void vectorSet(Stack *vec, size_t idx, void *item)
 {
   if (idx < vec->size)
   {
@@ -98,7 +98,7 @@ void vectorSet(Vector *vec, size_t idx, void *item)
  * @param idx ship index
  * @return if ships exist return ship index, otherwise return void pointer (NULL) 
  */
-void *vectorGet(Vector *vec, size_t idx)
+void *vectorGet(Stack *vec, size_t idx)
 {
   if (idx < vec->size)
   {
@@ -113,7 +113,7 @@ void *vectorGet(Vector *vec, size_t idx)
  * @param vec pointer to struct from type vector
  * @return return void pointer if it's empty
  */
-void *vectorBack(Vector *vec)
+void *vectorBack(Stack *vec)
 {
   if (0 == vec->size)
   {
@@ -129,7 +129,7 @@ void *vectorBack(Vector *vec)
  * @param vec pointer to struct from type vector
  * @param idx ship index
  */
-void vectorDelete(Vector *vec, size_t idx)
+void vectorDelete(Stack *vec, size_t idx)
 {
   if (idx >= vec->size)
   {
@@ -152,7 +152,7 @@ void vectorDelete(Vector *vec, size_t idx)
  * 
  * @param vec pointer to struct from type vector
  */
-void vectorPop(Vector *vec)
+void vectorPop(Stack *vec)
 {
   if (vec->size == 0)
   {
@@ -167,7 +167,7 @@ void vectorPop(Vector *vec)
  * 
  * @param vec pointer to struct from type vector
  */
-void vectorFree(Vector *vec)
+void vectorFree(Stack *vec)
 {
   if (vec->items != NULL)
   {
@@ -177,7 +177,7 @@ void vectorFree(Vector *vec)
     vec->capacity = 0;
   }
 }
-void *vectorGetLast(Vector *vec)
+void *vectorGetLast(Stack *vec)
 {
   return vec->items[vectorGetSize(vec) - 1];
 }

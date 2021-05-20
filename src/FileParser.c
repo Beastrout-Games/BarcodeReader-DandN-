@@ -39,8 +39,6 @@ char* signalReader(FILE* signalFile){
         }
 		i++;
 	}
-	printf("%s\n", inputString);
-
 	fileClose(signalFile);
 	return inputString;
 }
