@@ -1,0 +1,3 @@
+/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build/CMakeFiles/rebuild_cache.dir
+/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build/CMakeFiles/edit_cache.dir
+/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build/CMakeFiles/BarcodeReader.dir

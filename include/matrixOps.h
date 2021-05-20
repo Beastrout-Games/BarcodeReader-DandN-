@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <errno.h>
 
 /**
  * @brief Allocates memory and initialisez a matrix as an array of pointers.

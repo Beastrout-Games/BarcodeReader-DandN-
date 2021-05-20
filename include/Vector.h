@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdbool.h>
+#include <errno.h>
 
 typedef struct Vector{
   void **items;

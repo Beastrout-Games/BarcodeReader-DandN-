@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/FileParser.h
+stdio.h
+-
+stdlib.h
+-
+errno.h
+-
+
+/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/fileParser.c
+FileParser.h
+/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/FileParser.h
+
