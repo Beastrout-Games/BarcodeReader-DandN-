@@ -7,7 +7,7 @@ FILE* fileLoader(const char* fileName) {
 	//FIXME Make error checks for unit tests
 	if (barCodeInp == NULL){
         printf("Could not open the file!\n");
-        exit(1);
+        exit(ENOENT);
     }
 	return barCodeInp;
 }
@@ -21,7 +21,7 @@ char* signalReader(FILE* signalFile){
 	//FIXME Add Error handling
 	if (inputString == NULL){
 		printf("Could not allocate memory!\n");
-        exit(1);
+        exit(ENOMEM);
 	}
 
 	char c[MAX_FLOAT_CHAR];

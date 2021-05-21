@@ -10,7 +10,7 @@ int main(int argc, char **argv){
     for (int i = 1; i<argc; i++) {
 		barCodeFile = fileLoader(argv[i]);
         sbc = signalReader(barCodeFile);
-        signalDecoder(sbc);
+        sbc = signalDecoder(sbc);
+        printf("%s\n", sbc);
 	}
 }
-
