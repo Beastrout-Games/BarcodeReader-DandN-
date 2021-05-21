@@ -121,6 +121,16 @@ char vectorBack(Vector *vec)
   return vec->items[vec->size - 1];
 }
 
+char vectorFront(Vector *vec)
+{
+  if (0 == vec->size)
+  {
+    return 'e';
+  }
+
+  return vec->items[0];
+}
+
 /**
  * @brief deletes one element and reorders the vector array
  * 
@@ -151,6 +161,18 @@ char vectorPop(Vector *vec)
     exit(1);
   }
   temp = vectorBack(vec);
+  vec->size--;
+  return temp;
+}
+
+char vectorPull(Vector *vec){
+  char temp = 'e';
+  if (vec->size == 0)
+  {
+    printf("Error in pulling out of the vector!");
+    exit(1);
+  }
+  temp = vectorFront(vec);
   vec->size--;
   return temp;
 }

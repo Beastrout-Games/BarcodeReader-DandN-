@@ -22,6 +22,7 @@ void vectorPush(Vector *vec, char item);
 void vectorSet(Vector *vec, size_t idx, char item);
 char vectorGet(Vector *vec, size_t idx);
 char vectorBack(Vector *vec);
+char vectorFront(Vector *vec);
 void vectorDelete(Vector *vec, size_t idx);
 char vectorPop(Vector *vec);
 void vectorFree(Vector *vec);

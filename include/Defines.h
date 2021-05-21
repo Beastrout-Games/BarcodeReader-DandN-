@@ -5,6 +5,8 @@
 #define MAX_FLOAT_CHAR 4
 #define INITIAL_CAPACITY 50
 
+#define BC_ONE_UNIT_SIZE 5
+#define BC_STRING_UNIT_SIZE 6
 #define TABLE_SIZE 12
 
 #define ZERO        "00001"

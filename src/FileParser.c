@@ -25,8 +25,8 @@ char* signalReader(FILE* signalFile){
 	}
 
 	char c[MAX_FLOAT_CHAR];
-    float d;
-
+    float d = 0.0;
+	
 	while(!feof(signalFile)) {
         fscanf(signalFile,INPUT_FILE_FORMAT, c);
         d = atof(c);
@@ -47,29 +47,3 @@ void fileClose(FILE* fp) {
 	fclose(fp);
 	fp = NULL;
 }
-
-// int formulaC() {
-// 	int sum = 0;
-// 	int n; // number of symbols(after the conversion) -> lenght of the new arr
-// 	int Wc; //weight of a symbol
-
-// 	for(int i = 1; i <= n; i++) {
-// 		//Wc = current symbol from the array
-// 		//Wc = arr[i - 1]
-// 		sum += ((((n - i) % 10) + 1) * Wc) % 11;
-// 	}
-// 	return sum;
-// }
-
-// int formulaK() {
-// 	int sum = 0;
-// 	int n;
-// 	int Wc;
-
-// 	for(int i = 1; i <= n+1; i++) {
-// 		//Wc = current symbol from the array
-// 		//Wc = arr[i - 1]
-// 		sum += ((((n - i + 1) % 9) + 1) * Wc) % 11;
-// 	}
-// 	return sum;
-// }

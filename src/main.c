@@ -2,6 +2,7 @@
 #include <math.h>
 #include "FileParser.h"
 #include "BarcodeReader.h"
+#include "BarcodeDecoder.h"
 
 int main(int argc, char **argv){
     FILE* barCodeFile = NULL;
@@ -11,6 +12,8 @@ int main(int argc, char **argv){
 		barCodeFile = fileLoader(argv[i]);
         sbc = signalReader(barCodeFile);
         sbc = signalDecoder(sbc);
-        printf("%s\n", sbc);
+        decodeNumbers(sbc);
 	}
+
+    return 0;
 }
