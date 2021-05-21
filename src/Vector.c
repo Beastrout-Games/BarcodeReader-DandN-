@@ -37,8 +37,6 @@ bool vectorIsEmpty(Vector *vec)
   return vec->size == 0;
 }
 
-
-
 /**
  * @brief Re-allocated memory if the max capaity is reached.
  * 
@@ -144,14 +142,17 @@ void vectorDelete(Vector *vec, size_t idx)
  * 
  * @param vec pointer to struct from type vector
  */
-void vectorPop(Vector *vec)
+char vectorPop(Vector *vec)
 {
+  char temp = 'e';
   if (vec->size == 0)
   {
-    return;
+    printf("Error in popping a vector!");
+    exit(1);
   }
-
+  temp = vectorBack(vec);
   vec->size--;
+  return temp;
 }
 
 /**
@@ -167,5 +168,17 @@ void vectorFree(Vector *vec)
     vec->items = NULL;
     vec->size = 0;
     vec->capacity = 0;
+  }
+}
+
+void vectorReset(Vector *vec)
+{
+  if (vec->items != NULL)
+  {
+    free(vec->items);
+    vec->items = NULL;
+    vec->size = 0;
+    vec->capacity = INITIAL_CAPACITY;
+    vec->items =(char*)malloc(vec->capacity * sizeof(char));
   }
 }

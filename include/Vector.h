@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <stdio.h>
+#include "Defines.h"
 
 typedef struct Vector{
   char *items;
@@ -21,8 +23,9 @@ void vectorSet(Vector *vec, size_t idx, char item);
 char vectorGet(Vector *vec, size_t idx);
 char vectorBack(Vector *vec);
 void vectorDelete(Vector *vec, size_t idx);
-void vectorPop(Vector *vec);
+char vectorPop(Vector *vec);
 void vectorFree(Vector *vec);
 void *vectorGetLast(Vector *vec);
+void vectorReset(Vector *vec);
 
 #endif /* VECTOR_H_ */

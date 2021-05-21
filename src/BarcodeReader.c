@@ -2,54 +2,52 @@
 #include "Defines.h"
 #include "Vector.h"
 
-char* signalDecoder(Vector* decoded, char* signalBC) {
-    vectorInit(decoded, strlen(signalBC));
-    int i = 0, j = 0;
-    char *decodedSignal = (char*)malloc(strlen(signalBC)*sizeof(char));
+char* signalDecoder(char* signalBC) {
+    Vector decoded;
+    Vector decodedSignal;
+    vectorInit(&decoded, strlen(signalBC));
+    vectorInit(&decodedSignal, INITIAL_CAPACITY);
+    int i = 0;
     while (signalBC[i] != '\0') {
-        if (signalBC[i] == '1') {
+        do {
+            vectorPush(&decoded, signalBC[i]);
             i++;
-            continue;
-        }
-        else if(signalBC[i] == signalBC[i+1]) {
-            if (signalBC[i+1] == signalBC[i+2]) {
-                vectorPush(decoded, 'e');
-                i+=2;
-                //printf("Bar Code cannot be read!\n");
-                //exit(1);
-               while (!vectorIsEmpty(decoded)){
-                    char temp[5];
-                    for (int i = 0; i<5;i++){
-                        temp[i] = vectorPop(decoded);
+        } while (vectorBack(&decoded) == signalBC[i]);
+
+        switch (vectorBack(&decoded)) {
+            case '1':
+                vectorReset(&decoded);
+                break;
+
+            case '0':
+                if (vectorGetSize(&decoded)==1) {
+                    vectorPush(&decodedSignal, '0');
+                    continue;
+                }
+                else if (vectorGetSize(&decoded)==2){
+                    vectorPush(&decodedSignal, '1');
+                    continue;
+                }
+                else {
+                    for(int j=0; j < vectorGetSize(&decoded);j++) {
+                        vectorPush(&decodedSignal,'e');
                     }
                 }
-                    char temp[5];
-                while (decodedSignal[i]!='\0') {
-                    for (int i = 0; i<5 ;i++) {
-                        temp[i] = decodedSignal[i];
-                    }
-                }
-                //FIXME Check for error solution for noise
-            }
-            else {
-                vectorPush(decoded, '1');
-               // decodedSignal[j] = '1';
-               // i += 2, j++;
-            }
+                break;
+
+            default:
+                printf("Incorrectly parsed barcode string!");
+                exit(1);
+                break;
         }
-        else {
-                vectorPush(decoded, '0');
-                decodedSignal[j] = '0';
-                i++, j++;
-        }
-    }
     // for (int i=0; i<strlen(decodedSignal);i++){
     //     if (i%5==0)
     //         printf(" ");
     //     printf("%c", decodedSignal[i]);
     // }
-    printf("%s\n", decoded->items);
     //TODO free the undecoded signal
-    return decodedSignal;
+    }
+    char* tempString = decodedSignal.items;
+    return tempString;
 }
 
