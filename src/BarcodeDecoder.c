@@ -112,13 +112,13 @@ void sliceString(char* code, char** slicedCode, int size){
             static int k = 0;
             cut[j] = code[k++];
         }
-        cut[BC_STRING_UNIT_SIZE] = '\0';
+        cut[BC_STRING_UNIT_SIZE-1] = '\0';
         strncpy(slicedCode[i], cut, BC_STRING_UNIT_SIZE);
     }
     //FIXME Remove
     /*check if sliced right*/
 }
-//---------------------------------------------
+//--------------------------------------------
 
 int* decodeNumbers(char* code){
 //DECODE---------------------------------------
