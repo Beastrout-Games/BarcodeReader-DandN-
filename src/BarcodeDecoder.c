@@ -5,7 +5,7 @@ static void getCleanCode(int* decoded, int size, int** pureBC) {
         (*pureBC)[i-1] = decoded[i];
     }
 }
-//formula C-----------------------------------
+
 static int formulaC(int* pureCode, int size) {
     int n = size - 4;
     int sum = 0;
@@ -19,7 +19,7 @@ static int formulaC(int* pureCode, int size) {
     
     return sum;
 }
-//-------------------------------------------
+
 
 static int formulaK(int* pureCode, int size, int C) { 
     int n = size - 4;
@@ -40,7 +40,7 @@ static int formulaK(int* pureCode, int size, int C) {
 
     return sum;
 }
-//------------------------------------------*/
+
 static bool checkSumValidation(int* decoded, int size) {
     int C = 0;
     int K = 0;
@@ -48,6 +48,7 @@ static bool checkSumValidation(int* decoded, int size) {
     getCleanCode(decoded, size, &pureBC);
     C = formulaC(pureBC, size);
     K = formulaK(pureBC, size, C);
+    free(pureBC);
 
     for (int i= 0; i< 6;i++) {
         printf("%d ", pureBC[i]);
@@ -75,14 +76,13 @@ static bool isValidCode(int* decoded, int size) {
         printf("Barcode truncated. Move the scanner to the left.\n");
         return false;
     }
-    else{
+    else {
         printf("Barcode truncated. Move the scanner to the right.\n");
         return false;
     }
 }
 
 static void printBarCode (int *decoded, int size) {
-    
     if(isValidCode(decoded, size)) {
         printf("The barcode scanned is:\n");
         for (int i=1; i<size - 3; i++) {
@@ -98,7 +98,7 @@ static void printBarCode (int *decoded, int size) {
     }
 }
 
-//slice --------------------------------------
+
 void sliceString(char* code, char** slicedCode, int size){ 
    //TODO create reverse method to be used when the barcode is invalid one way
     /*char code1[strlen(code)];
@@ -115,18 +115,17 @@ void sliceString(char* code, char** slicedCode, int size){
         cut[BC_STRING_UNIT_SIZE-1] = '\0';
         strncpy(slicedCode[i], cut, BC_STRING_UNIT_SIZE);
     }
-    //FIXME Remove
-    /*check if sliced right*/
 }
-//--------------------------------------------
+
 
 int* decodeNumbers(char* code){
-//DECODE---------------------------------------
     int size = strlen(code) / BC_ONE_UNIT_SIZE;
-    char** slicedCode = malloc(size * sizeof(char*));
-    for(int i = 0; i<size; i++){
-        slicedCode[i] = malloc(BC_STRING_UNIT_SIZE * sizeof(char*));
-    }
+    char** slicedCode = NULL;
+    slicedCode = (char**) matrixInit(size, BC_STRING_UNIT_SIZE);
+     //malloc(size * sizeof(char*));
+    //for(int i = 0; i<size; i++){
+    //    slicedCode[i] = malloc(BC_STRING_UNIT_SIZE * sizeof(char*));
+   // }
     sliceString(code, slicedCode, size);
 
     int* decodedNumbers = (int*)malloc(size * sizeof(int));
@@ -142,8 +141,9 @@ int* decodeNumbers(char* code){
             }
         }
     }
-
+    
+    //FIXME remove the print
     printBarCode(decodedNumbers, size);
+    matrixDelete((void**) slicedCode, size);
     return decodedNumbers;
 }
-//--------------------------------------------

@@ -19,19 +19,19 @@
 
 {
   "directory": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build",
-  "command": "/bin/clang-10  -I../include  -g   -o CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o   -c /mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/matrixOps.c",
-  "file": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/matrixOps.c"
-},
-
-{
-  "directory": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build",
-  "command": "/bin/clang-10  -I../include  -g   -o CMakeFiles/BarcodeReader.dir/src/queueOps.c.o   -c /mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/queueOps.c",
-  "file": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/queueOps.c"
+  "command": "/bin/clang-10  -I../include  -g   -o CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o   -c /mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/BarcodeDecoder.c",
+  "file": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/BarcodeDecoder.c"
 },
 
 {
   "directory": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build",
   "command": "/bin/clang-10  -I../include  -g   -o CMakeFiles/BarcodeReader.dir/src/fileParser.c.o   -c /mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/fileParser.c",
   "file": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/fileParser.c"
+},
+
+{
+  "directory": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/build",
+  "command": "/bin/clang-10  -I../include  -g   -o CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o   -c /mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/matrixOps.c",
+  "file": "/mnt/e/Coding/Repos/BarCodeScanner/BarcodeReader/src/matrixOps.c"
 }
 ]

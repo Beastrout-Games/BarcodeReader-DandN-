@@ -16,12 +16,15 @@ add_executable(
         ${INC_DIR}/Vector.h
         ${INC_DIR}/fileParser.h
         ${INC_DIR}/Defines.h
+        ${INC_DIR}/matrixOps.h
+        ${INC_DIR}/publicAPI.h
         
         ${SRC_DIR}/main.c
         ${SRC_DIR}/Vector.c
         ${SRC_DIR}/BarcodeReader.c
         ${SRC_DIR}/BarcodeDecoder.c
         ${SRC_DIR}/fileParser.c
+        ${SRC_DIR}/matrixOps.c
     )
 
 target_include_directories(

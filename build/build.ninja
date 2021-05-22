@@ -82,15 +82,8 @@ build CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o: C_COMPILER__BarcodeRea
   OBJECT_DIR = CMakeFiles/BarcodeReader.dir
   OBJECT_FILE_DIR = CMakeFiles/BarcodeReader.dir/src
 
-build CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o: C_COMPILER__BarcodeReader ../src/matrixOps.c || cmake_object_order_depends_target_BarcodeReader
-  DEP_FILE = CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o.d
-  FLAGS = -g
-  INCLUDES = -I../include
-  OBJECT_DIR = CMakeFiles/BarcodeReader.dir
-  OBJECT_FILE_DIR = CMakeFiles/BarcodeReader.dir/src
-
-build CMakeFiles/BarcodeReader.dir/src/queueOps.c.o: C_COMPILER__BarcodeReader ../src/queueOps.c || cmake_object_order_depends_target_BarcodeReader
-  DEP_FILE = CMakeFiles/BarcodeReader.dir/src/queueOps.c.o.d
+build CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o: C_COMPILER__BarcodeReader ../src/BarcodeDecoder.c || cmake_object_order_depends_target_BarcodeReader
+  DEP_FILE = CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o.d
   FLAGS = -g
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/BarcodeReader.dir
@@ -98,6 +91,13 @@ build CMakeFiles/BarcodeReader.dir/src/queueOps.c.o: C_COMPILER__BarcodeReader .
 
 build CMakeFiles/BarcodeReader.dir/src/fileParser.c.o: C_COMPILER__BarcodeReader ../src/fileParser.c || cmake_object_order_depends_target_BarcodeReader
   DEP_FILE = CMakeFiles/BarcodeReader.dir/src/fileParser.c.o.d
+  FLAGS = -g
+  INCLUDES = -I../include
+  OBJECT_DIR = CMakeFiles/BarcodeReader.dir
+  OBJECT_FILE_DIR = CMakeFiles/BarcodeReader.dir/src
+
+build CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o: C_COMPILER__BarcodeReader ../src/matrixOps.c || cmake_object_order_depends_target_BarcodeReader
+  DEP_FILE = CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o.d
   FLAGS = -g
   INCLUDES = -I../include
   OBJECT_DIR = CMakeFiles/BarcodeReader.dir
@@ -111,7 +111,7 @@ build CMakeFiles/BarcodeReader.dir/src/fileParser.c.o: C_COMPILER__BarcodeReader
 #############################################
 # Link the executable BarcodeReader
 
-build BarcodeReader: C_EXECUTABLE_LINKER__BarcodeReader CMakeFiles/BarcodeReader.dir/src/main.c.o CMakeFiles/BarcodeReader.dir/src/Vector.c.o CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o CMakeFiles/BarcodeReader.dir/src/queueOps.c.o CMakeFiles/BarcodeReader.dir/src/fileParser.c.o
+build BarcodeReader: C_EXECUTABLE_LINKER__BarcodeReader CMakeFiles/BarcodeReader.dir/src/main.c.o CMakeFiles/BarcodeReader.dir/src/Vector.c.o CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o CMakeFiles/BarcodeReader.dir/src/fileParser.c.o CMakeFiles/BarcodeReader.dir/src/matrixOps.c.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/BarcodeReader.dir
   POST_BUILD = :

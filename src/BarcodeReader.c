@@ -3,33 +3,34 @@
 #include "Vector.h"
 
 char* signalDecoder(char* signalBC) {
-    Vector decoded;
-    Vector decodedSignal;
-    vectorInit(&decoded, strlen(signalBC));
+    Vector rawSignal = {NULL, 0, 0};
+    Vector decodedSignal = {NULL, 0, 0};
+    size_t stringLength = strlen(signalBC);
+    vectorInit(&rawSignal, stringLength);
     vectorInit(&decodedSignal, INITIAL_CAPACITY);
     int i = 0;
     while (signalBC[i] != '\0') {
         do {
-            vectorPush(&decoded, signalBC[i]);
+            vectorPush(&rawSignal, signalBC[i]);
             i++;
-        } while (vectorBack(&decoded) == signalBC[i]);
+        } while (vectorBack(&rawSignal) == signalBC[i]);
 
-        switch (vectorBack(&decoded)) {
+        switch (vectorBack(&rawSignal)) {
             case '1':
-                vectorReset(&decoded);
+                vectorReset(&rawSignal);
                 break;
 
             case '0':
-                if (vectorGetSize(&decoded)==1) {
+                if (vectorGetSize(&rawSignal)==1) {
                     vectorPush(&decodedSignal, '0');
                     continue;
                 }
-                else if (vectorGetSize(&decoded)==2){
+                else if (vectorGetSize(&rawSignal)==2){
                     vectorPush(&decodedSignal, '1');
                     continue;
                 }
                 else {
-                    for(int j=0; j < vectorGetSize(&decoded);j++) {
+                    for(int j=0; j < vectorGetSize(&rawSignal); j++) {
                         vectorPush(&decodedSignal,'e');
                     }
                 }
@@ -40,14 +41,13 @@ char* signalDecoder(char* signalBC) {
                 exit(1);
                 break;
         }
-    // for (int i=0; i<strlen(decodedSignal);i++){
-    //     if (i%5==0)
-    //         printf(" ");
-    //     printf("%c", decodedSignal[i]);
-    // }
+    
     //TODO free the undecoded signal
     }
-    char* tempString = decodedSignal.items;
+    char* tempString = (char*)malloc(sizeof(char*)* (stringLength+1));
+    strcpy(tempString, decodedSignal.items);
+    vectorFree(&rawSignal);
+    vectorFree(&decodedSignal);
     return tempString;
 }
 

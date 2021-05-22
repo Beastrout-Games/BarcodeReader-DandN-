@@ -8,7 +8,7 @@ CC = clang
 
 # define any compile-time flags
 #-fsanitize=address
-CFLAGS	:= -Wall -Wextra -g
+CFLAGS	:= -fsanitize=address -Wall -Wextra -g
 
 # define library paths in addition to /usr/lib
 #   if I wanted to include libraries not in /usr/lib I'd specify
@@ -88,5 +88,5 @@ clean:
 	@echo Cleanup complete!
 
 run: all
-	./$(OUTPUTMAIN) test1.txt
+	./$(OUTPUTMAIN) ./output/test2.txt
 	@echo Executing 'run: all' complete!

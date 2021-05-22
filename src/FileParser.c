@@ -3,7 +3,9 @@
 #include <stdbool.h>
 
 FILE* fileLoader(const char* fileName) {
-	FILE* barCodeInp = fopen(fileName, "r");
+	FILE* barCodeInp = NULL;
+
+	barCodeInp = fopen(fileName, "r");
 	//FIXME Make error checks for unit tests
 	if (barCodeInp == NULL){
         printf("Could not open the file!\n");
@@ -13,11 +15,11 @@ FILE* fileLoader(const char* fileName) {
 }
 
 char* signalReader(FILE* signalFile){
-	int singnalLength = 0, i = 0;
+	int signalLength = 0, i = 0;
+	char* inputString = NULL;
 	
-	fscanf(signalFile, "%d", &singnalLength);
-	// printf("%d\n", singnalLength);
-	char* inputString = (char*)malloc(singnalLength * sizeof(char));
+	fscanf(signalFile, "%d", &signalLength);
+	inputString = (char*)malloc((signalLength+1) * sizeof(char*));
 	//FIXME Add Error handling
 	if (inputString == NULL){
 		printf("Could not allocate memory!\n");
@@ -39,7 +41,9 @@ char* signalReader(FILE* signalFile){
         }
 		i++;
 	}
+	inputString[signalLength] = '\0'; 
 	fileClose(signalFile);
+	
 	return inputString;
 }
 

@@ -6,6 +6,7 @@
 #include <errno.h>
 #include <stdbool.h>
 #include "Defines.h"
+#include "matrixOps.h"
 
 void sliceString(char* code, char** slicedCode, int size);
 int* decodeNumbers(char* code);
