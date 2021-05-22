@@ -50,9 +50,6 @@ static bool checkSumValidation(int* decoded, int size) {
     K = formulaK(pureBC, size, C);
     free(pureBC);
 
-    for (int i= 0; i< 6;i++) {
-        printf("%d ", pureBC[i]);
-    }
     if ((C == decoded[size - 3]) && (K == decoded[size - 2])) {
         return true;
     }

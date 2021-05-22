@@ -19,7 +19,7 @@ char* signalReader(FILE* signalFile){
 	char* inputString = NULL;
 	
 	fscanf(signalFile, "%d", &signalLength);
-	inputString = (char*)malloc((signalLength+1) * sizeof(char*));
+	inputString = (char*)malloc((signalLength) * sizeof(char*));
 	//FIXME Add Error handling
 	if (inputString == NULL){
 		printf("Could not allocate memory!\n");
