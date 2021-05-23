@@ -10,6 +10,7 @@
 
 void sliceString(char* code, char** slicedCode, int size);
 int* decodeNumbers(char* code);
+char* reverseStr(char* string);
 
 
 #endif /* BARCODEDECODER_H */

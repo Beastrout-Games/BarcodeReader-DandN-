@@ -44,8 +44,7 @@ char* signalDecoder(char* signalBC) {
     
     //TODO free the undecoded signal
     }
-    char* tempString = (char*)malloc(sizeof(char*)* (stringLength));
-    strcpy(tempString, decodedSignal.items);
+    char* tempString = (char*)malloc(sizeof(char*)*(stringLength));
     strncpy(tempString,decodedSignal.items,stringLength);
     vectorFree(&rawSignal);
     vectorFree(&decodedSignal);

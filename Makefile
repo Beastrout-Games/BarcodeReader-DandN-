@@ -88,5 +88,5 @@ clean:
 	@echo Cleanup complete!
 
 run: all
-	./$(OUTPUTMAIN) ./output/test1.txt
+	./$(OUTPUTMAIN) ./output/test2.txt
 	@echo Executing 'run: all' complete!

@@ -1,8 +1,8 @@
 #ifndef _DEFINES_H_
 #define _DEFINES_H_
 
-#define INPUT_FILE_FORMAT "%s "
-#define MAX_FLOAT_CHAR 4
+#define INPUT_FILE_FORMAT "%f "
+#define MAX_FLOAT_CHAR 5
 #define INITIAL_CAPACITY 50
 
 #define BC_ONE_UNIT_SIZE 5
