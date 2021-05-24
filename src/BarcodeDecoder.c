@@ -95,11 +95,6 @@ static void printBarCode(int* decoded, int size) {
 }
 
 void sliceString(char* code, char** slicedCode, int size) {
-	//TODO create reverse method to be used when the barcode is invalid one way
-	 /*char code1[strlen(code)];
-	 reverseStr(code, code1, strlen(code));
-	 printf("%s\n", code1);*/
-
 	char cut[BC_STRING_UNIT_SIZE];
 
 	for (int i = 0; i < size; i++) {
@@ -113,7 +108,6 @@ void sliceString(char* code, char** slicedCode, int size) {
 }
 
 char* reverseStr(char* string) {
-	//FIXME use the vector to save on operation steps
     int i, j = 0;
 	int len = strlen(string);
 	char* tempString = (char*)malloc(len*sizeof(char));

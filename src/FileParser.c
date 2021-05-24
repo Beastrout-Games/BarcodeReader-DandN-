@@ -6,7 +6,6 @@ FILE* fileLoader(const char* fileName) {
 	FILE* barCodeInp = NULL;
 
 	barCodeInp = fopen(fileName, "r");
-	//FIXME Make error checks for unit tests
 	if (barCodeInp == NULL){
         printf("Could not open the file!\n");
         exit(ENOENT);
@@ -20,7 +19,6 @@ char* signalReader(FILE* signalFile){
 	
 	fscanf(signalFile, "%d", &signalLength);
 	inputString = (char*)malloc((signalLength) * sizeof(char));
-	//FIXME Add Error handling
 	if (inputString == NULL){
 		printf("Could not allocate memory!\n");
         exit(ENOMEM);
