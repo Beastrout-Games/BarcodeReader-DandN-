@@ -18,18 +18,18 @@ char* signalReader(FILE* signalFile){
 	char* inputString = NULL;
 	
 	fscanf(signalFile, "%d", &signalLength);
-	inputString = (char*)malloc((signalLength) * sizeof(char));
+	inputString = (char*)malloc((signalLength + 1) * sizeof(char));
 	if (inputString == NULL){
 		printf("Could not allocate memory!\n");
         exit(ENOMEM);
 	}
 
-	//char c[MAX_FLOAT_CHAR+1];
     float d = 0.0;
 	
 	while(!feof(signalFile)) {
         fscanf(signalFile, INPUT_FILE_FORMAT, &d);
 
+		//Hardcoded for now(waiting for smarter solution)
         if(d < 0.47) {
 			inputString[i] = '0';
         }
@@ -40,7 +40,6 @@ char* signalReader(FILE* signalFile){
 	}
 	inputString[signalLength] = '\0'; 
 	fileClose(signalFile);
-	printf("%s", inputString);
 	
 	return inputString;
 }

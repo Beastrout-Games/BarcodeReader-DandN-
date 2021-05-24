@@ -42,7 +42,9 @@ char* signalDecoder(char* signalBC) {
                 break;
         }
     }
-    char* tempString = (char*)malloc(sizeof(char*)*(stringLength));
+    vectorPush(&decodedSignal, '\0');
+    
+    char* tempString = (char*)malloc(sizeof(char*)*(stringLength + 1));
     strncpy(tempString,decodedSignal.items,stringLength);
     vectorFree(&rawSignal);
     vectorFree(&decodedSignal);

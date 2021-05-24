@@ -68,13 +68,16 @@ static bool isValidCode(int* decoded, int size) {
 			return false;
 		}
 	}
-	else if (decoded[0] != 11) {
+
+	return false;
+}
+
+static void printErrorStatus(int* decoded) {
+	if (decoded[0] != 11) {
 		printf("Barcode truncated. Move the scanner to the left.\n");
-		return false;
 	}
 	else {
 		printf("Barcode truncated. Move the scanner to the right.\n");
-		return false;
 	}
 }
 
@@ -88,9 +91,11 @@ static void printBarCode(int* decoded, int size) {
 			}
 			printf("%d ", decoded[i]);
 		}
+		printf("\n");
 	}
 	else {
-		//exit(1);
+		printErrorStatus(decoded);
+		exit(1);
 	}
 }
 
@@ -110,7 +115,7 @@ void sliceString(char* code, char** slicedCode, int size) {
 char* reverseStr(char* string) {
     int i, j = 0;
 	int len = strlen(string);
-	char* tempString = (char*)malloc(len*sizeof(char));
+	char* tempString = (char*)malloc((len + 1)*sizeof(char));
     for(i = len - 1, j = 0; i >= 0; i--, j++) {
         tempString[j] = string[i];
     }
