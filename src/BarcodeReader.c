@@ -1,34 +1,53 @@
 ﻿#include "BarcodeReader.h"
 #include "Defines.h"
+#include "Vector.h"
 
-char* signalDecoder(char* signalBC){
-    int i = 0, j = 0;
-    char *decodedSignal = (char*)malloc(strlen(signalBC)*sizeof(char));
-    while (signalBC[i] != '\0'){
-        if (signalBC[i] == '1'){
+char* signalDecoder(char* signalBC) {
+    Vector rawSignal = {NULL, 0, 0};
+    Vector decodedSignal = {NULL, 0, 0};
+    size_t stringLength = strlen(signalBC);
+    vectorInit(&rawSignal, stringLength);
+    vectorInit(&decodedSignal, INITIAL_CAPACITY);
+    int i = 0;
+    while (signalBC[i] != '\0') {
+        do {
+            vectorPush(&rawSignal, signalBC[i]);
             i++;
-            continue;
-        }
-        else if(signalBC[i] == signalBC[i+1]) {
-            if (signalBC[i+1] == signalBC[i+2]) {
-                printf("Bar Code cannot be read!\n");
+        } while (vectorBack(&rawSignal) == signalBC[i]);
+
+        switch (vectorBack(&rawSignal)) {
+            case '1':
+                vectorReset(&rawSignal);
+                break;
+
+            case '0':
+                if (vectorGetSize(&rawSignal)==1) {
+                    vectorPush(&decodedSignal, '0');
+                    continue;
+                }
+                else if (vectorGetSize(&rawSignal)==2){
+                    vectorPush(&decodedSignal, '1');
+                    continue;
+                }
+                else {
+                    for(int j=0; j < vectorGetSize(&rawSignal); j++) {
+                        vectorPush(&decodedSignal,'e');
+                    }
+                }
+                break;
+
+            default:
+                printf("Incorrectly parsed barcode string!");
                 exit(1);
-                //FIXME Check for error solution for noise
-            }
-            else {
-                decodedSignal[j] = '1';
-                i += 2, j++;
-            }
+                break;
         }
-        else {
-                decodedSignal[j] = '0';
-                i++, j++;
-        }
+    
+    //TODO free the undecoded signal
     }
-    // for (int i=0; i<strlen(decodedSignal);i++){
-    //     if (i%5==0)
-    //         printf(" ");
-    //     printf("%c", decodedSignal[i]);
-    // }
-    return decodedSignal;
+    char* tempString = (char*)malloc(sizeof(char*)*(stringLength));
+    strncpy(tempString,decodedSignal.items,stringLength);
+    vectorFree(&rawSignal);
+    vectorFree(&decodedSignal);
+    return tempString;
 }
+

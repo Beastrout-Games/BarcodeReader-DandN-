@@ -4,25 +4,29 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <errno.h>
+#include <stdio.h>
+#include "Defines.h"
 
-typedef struct Stack{
+typedef struct Vector{
   char *items;
   size_t capacity;
   size_t size;
-} Stack;
+} Vector;
 
 
-void vectorInit(Stack *vec, int initialCapacity);
-int vectorGetSize(Stack *vec);
-bool vectorIsEmpty(Stack *vec);
-void vectorResize(Stack *vec, size_t newSize);
-void vectorPush(Stack *vec, void *elem);
-void vectorSet(Stack *vec, size_t idx, void *elem);
-void* vectorGet(Stack *vec, size_t idx);
-void* vectorBack(Stack *vec);
-void vectorDelete(Stack *vec, size_t idx);
-void vectorPop(Stack *vec);
-void vectorFree(Stack *vec);
-void *vectorGetLast(Stack *vec);
+void vectorInit(Vector *vec, size_t initialCapacity);
+int vectorGetSize(Vector *vec);
+bool vectorIsEmpty(Vector *vec);
+void vectorResize(Vector *vec, size_t newSize);
+void vectorPush(Vector *vec, char item);
+void vectorSet(Vector *vec, size_t idx, char item);
+char vectorGet(Vector *vec, size_t idx);
+char vectorBack(Vector *vec);
+char vectorFront(Vector *vec);
+void vectorDelete(Vector *vec, size_t idx);
+char vectorPop(Vector *vec);
+void vectorFree(Vector *vec);
+void *vectorGetLast(Vector *vec);
+void vectorReset(Vector *vec);
 
 #endif /* VECTOR_H_ */

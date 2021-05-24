@@ -4,9 +4,10 @@
 #
 
 # define the C compiler to use
-CC = gcc
+CC = clang
 
 # define any compile-time flags
+#-fsanitize=address
 CFLAGS	:= -Wall -Wextra -g
 
 # define library paths in addition to /usr/lib
@@ -87,5 +88,5 @@ clean:
 	@echo Cleanup complete!
 
 run: all
-	./$(OUTPUTMAIN) test1.txt
+	./$(OUTPUTMAIN) ./output/test2.txt
 	@echo Executing 'run: all' complete!
