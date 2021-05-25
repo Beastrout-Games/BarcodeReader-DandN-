@@ -153,30 +153,6 @@ src/BarcodeDecoder.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.s
 .PHONY : src/BarcodeDecoder.c.s
 
-src/BarcodeOps.o: src/BarcodeOps.c.o
-.PHONY : src/BarcodeOps.o
-
-# target to build an object file
-src/BarcodeOps.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o
-.PHONY : src/BarcodeOps.c.o
-
-src/BarcodeOps.i: src/BarcodeOps.c.i
-.PHONY : src/BarcodeOps.i
-
-# target to preprocess a source file
-src/BarcodeOps.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.i
-.PHONY : src/BarcodeOps.c.i
-
-src/BarcodeOps.s: src/BarcodeOps.c.s
-.PHONY : src/BarcodeOps.s
-
-# target to generate assembly for a file
-src/BarcodeOps.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.s
-.PHONY : src/BarcodeOps.c.s
-
 src/BarcodeReader.o: src/BarcodeReader.c.o
 .PHONY : src/BarcodeReader.o
 
@@ -201,29 +177,29 @@ src/BarcodeReader.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.s
 .PHONY : src/BarcodeReader.c.s
 
-src/FileParser.o: src/FileParser.c.o
-.PHONY : src/FileParser.o
+src/BarcodeValidation.o: src/BarcodeValidation.c.o
+.PHONY : src/BarcodeValidation.o
 
 # target to build an object file
-src/FileParser.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/FileParser.c.o
-.PHONY : src/FileParser.c.o
+src/BarcodeValidation.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o
+.PHONY : src/BarcodeValidation.c.o
 
-src/FileParser.i: src/FileParser.c.i
-.PHONY : src/FileParser.i
+src/BarcodeValidation.i: src/BarcodeValidation.c.i
+.PHONY : src/BarcodeValidation.i
 
 # target to preprocess a source file
-src/FileParser.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/FileParser.c.i
-.PHONY : src/FileParser.c.i
+src/BarcodeValidation.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.i
+.PHONY : src/BarcodeValidation.c.i
 
-src/FileParser.s: src/FileParser.c.s
-.PHONY : src/FileParser.s
+src/BarcodeValidation.s: src/BarcodeValidation.c.s
+.PHONY : src/BarcodeValidation.s
 
 # target to generate assembly for a file
-src/FileParser.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/FileParser.c.s
-.PHONY : src/FileParser.c.s
+src/BarcodeValidation.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.s
+.PHONY : src/BarcodeValidation.c.s
 
 src/MatrixOps.o: src/MatrixOps.c.o
 .PHONY : src/MatrixOps.o
@@ -248,6 +224,30 @@ src/MatrixOps.s: src/MatrixOps.c.s
 src/MatrixOps.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.s
 .PHONY : src/MatrixOps.c.s
+
+src/StringOps.o: src/StringOps.c.o
+.PHONY : src/StringOps.o
+
+# target to build an object file
+src/StringOps.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/StringOps.c.o
+.PHONY : src/StringOps.c.o
+
+src/StringOps.i: src/StringOps.c.i
+.PHONY : src/StringOps.i
+
+# target to preprocess a source file
+src/StringOps.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/StringOps.c.i
+.PHONY : src/StringOps.c.i
+
+src/StringOps.s: src/StringOps.c.s
+.PHONY : src/StringOps.s
+
+# target to generate assembly for a file
+src/StringOps.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/BarcodeReader.dir/build.make CMakeFiles/BarcodeReader.dir/src/StringOps.c.s
+.PHONY : src/StringOps.c.s
 
 src/Vector.o: src/Vector.c.o
 .PHONY : src/Vector.o
@@ -309,18 +309,18 @@ help:
 	@echo "... src/BarcodeDecoder.o"
 	@echo "... src/BarcodeDecoder.i"
 	@echo "... src/BarcodeDecoder.s"
-	@echo "... src/BarcodeOps.o"
-	@echo "... src/BarcodeOps.i"
-	@echo "... src/BarcodeOps.s"
 	@echo "... src/BarcodeReader.o"
 	@echo "... src/BarcodeReader.i"
 	@echo "... src/BarcodeReader.s"
-	@echo "... src/FileParser.o"
-	@echo "... src/FileParser.i"
-	@echo "... src/FileParser.s"
+	@echo "... src/BarcodeValidation.o"
+	@echo "... src/BarcodeValidation.i"
+	@echo "... src/BarcodeValidation.s"
 	@echo "... src/MatrixOps.o"
 	@echo "... src/MatrixOps.i"
 	@echo "... src/MatrixOps.s"
+	@echo "... src/StringOps.o"
+	@echo "... src/StringOps.i"
+	@echo "... src/StringOps.s"
 	@echo "... src/Vector.o"
 	@echo "... src/Vector.i"
 	@echo "... src/Vector.s"

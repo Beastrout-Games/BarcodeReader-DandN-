@@ -2,52 +2,26 @@
 #include "Defines.h"
 #include "Vector.h"
 
-char* signalDecoder(char* signalBC) {
-    Vector rawSignal = {NULL, 0, 0};
-    Vector decodedSignal = {NULL, 0, 0};
-    __uint8_t stringLength = strlen(signalBC);
-    vectorInit(&rawSignal, stringLength);
-    vectorInit(&decodedSignal, INITIAL_CAPACITY);
-    int i = 0;
-    while (signalBC[i] != '\0') {
-        do {
-            vectorPush(&rawSignal, signalBC[i]);
-            i++;
-        } while (vectorBack(&rawSignal) == signalBC[i]);
+char* signalReader(int sizeOfInput) {
+	char* inputString = NULL;
 
-        switch (vectorBack(&rawSignal)) {
-            case '1':
-                vectorReset(&rawSignal);
-                break;
+	inputString = (char*)malloc((sizeOfInput + 1) * sizeof(char));
+	if (inputString == NULL){
+		printf("Could not allocate memory!\n");
+        exit(ENOMEM);
+	}
 
-            case '0':
-                if (vectorGetSize(&rawSignal)==1) {
-                    vectorPush(&decodedSignal, '0');
-                    continue;
-                }
-                else if (vectorGetSize(&rawSignal)==2){
-                    vectorPush(&decodedSignal, '1');
-                    continue;
-                }
-                else {
-                    for(int j=0; j < vectorGetSize(&rawSignal); j++) {
-                        vectorPush(&decodedSignal,'e');
-                    }
-                }
-                break;
-
-            default:
-                printf("Incorrectly parsed barcode string!");
-                exit(1);
-                break;
+	float d = 0.0;
+	for(int i = 0; i < sizeOfInput-1; i++) {
+		scanf(INPUT_FORMAT, &d);
+		//Hardcoded for now(waiting for smarter solution)
+        if(d < 0.47) {
+			inputString[i] = '0';
         }
-    }
-    vectorPush(&decodedSignal, '\0');
-    
-    char* tempString = (char*)malloc(sizeof(char*)*(stringLength + 1));
-    strncpy(tempString,decodedSignal.items,stringLength);
-    vectorFree(&rawSignal);
-    vectorFree(&decodedSignal);
-    return tempString;
+        else {
+			inputString[i] = '1';
+        }
+	}
+	inputString[sizeOfInput] = '\0'; 
+	return inputString;
 }
-

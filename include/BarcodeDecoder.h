@@ -1,5 +1,6 @@
 #ifndef BARCODEDECODER_H
 #define BARCODEDECODER_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -8,9 +9,26 @@
 #include "Defines.h"
 #include "MatrixOps.h"
 
-void sliceString(char* code, char** slicedCode, int size);
-int* decodeNumbers(char* code);
-char* reverseStr(char* string);
+/**
+ * @brief Inital barcode decoder. Returns the decoded barcode string
+ * 
+ * @param signalBC The raw read barcode from the standart input
+ * @return char*
+ */
+char* signalDecoder(char* signalBC);
 
+/**
+ * @brief Decodes an already translated from light signals barcode string 
+          into product barcode numbers.
+ * 
+ * @param code An already translated barcode string
+ * @return int* 
+ */
+int* decodeNumbers(char* code);
+
+/**
+ * @brief Prints the final decoded into product numbers barcode
+ */
+void printBarCode(int* decoded, int size);
 
 #endif /* BARCODEDECODER_H */

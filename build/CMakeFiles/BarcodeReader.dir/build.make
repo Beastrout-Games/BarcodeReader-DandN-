@@ -83,24 +83,10 @@ CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeDecoder.c -o CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.s
 
-CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o: CMakeFiles/BarcodeReader.dir/flags.make
-CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o: ../src/BarcodeOps.c
-CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o -MF CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o.d -o CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeOps.c
-
-CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeOps.c > CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.i
-
-CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeOps.c -o CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.s
-
 CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o: CMakeFiles/BarcodeReader.dir/flags.make
 CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o: ../src/BarcodeReader.c
 CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o -MF CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o.d -o CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeReader.c
 
 CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.i: cmake_force
@@ -111,24 +97,24 @@ CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeReader.c -o CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.s
 
-CMakeFiles/BarcodeReader.dir/src/FileParser.c.o: CMakeFiles/BarcodeReader.dir/flags.make
-CMakeFiles/BarcodeReader.dir/src/FileParser.c.o: ../src/FileParser.c
-CMakeFiles/BarcodeReader.dir/src/FileParser.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BarcodeReader.dir/src/FileParser.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/FileParser.c.o -MF CMakeFiles/BarcodeReader.dir/src/FileParser.c.o.d -o CMakeFiles/BarcodeReader.dir/src/FileParser.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/FileParser.c
+CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o: CMakeFiles/BarcodeReader.dir/flags.make
+CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o: ../src/BarcodeValidation.c
+CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o -MF CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o.d -o CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeValidation.c
 
-CMakeFiles/BarcodeReader.dir/src/FileParser.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BarcodeReader.dir/src/FileParser.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/FileParser.c > CMakeFiles/BarcodeReader.dir/src/FileParser.c.i
+CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeValidation.c > CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.i
 
-CMakeFiles/BarcodeReader.dir/src/FileParser.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/FileParser.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/FileParser.c -o CMakeFiles/BarcodeReader.dir/src/FileParser.c.s
+CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/BarcodeValidation.c -o CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.s
 
 CMakeFiles/BarcodeReader.dir/src/main.c.o: CMakeFiles/BarcodeReader.dir/flags.make
 CMakeFiles/BarcodeReader.dir/src/main.c.o: ../src/main.c
 CMakeFiles/BarcodeReader.dir/src/main.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BarcodeReader.dir/src/main.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/BarcodeReader.dir/src/main.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/main.c.o -MF CMakeFiles/BarcodeReader.dir/src/main.c.o.d -o CMakeFiles/BarcodeReader.dir/src/main.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/main.c
 
 CMakeFiles/BarcodeReader.dir/src/main.c.i: cmake_force
@@ -142,7 +128,7 @@ CMakeFiles/BarcodeReader.dir/src/main.c.s: cmake_force
 CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o: CMakeFiles/BarcodeReader.dir/flags.make
 CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o: ../src/MatrixOps.c
 CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o -MF CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o.d -o CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/MatrixOps.c
 
 CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.i: cmake_force
@@ -152,6 +138,20 @@ CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.i: cmake_force
 CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/MatrixOps.c -o CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.s
+
+CMakeFiles/BarcodeReader.dir/src/StringOps.c.o: CMakeFiles/BarcodeReader.dir/flags.make
+CMakeFiles/BarcodeReader.dir/src/StringOps.c.o: ../src/StringOps.c
+CMakeFiles/BarcodeReader.dir/src/StringOps.c.o: CMakeFiles/BarcodeReader.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/BarcodeReader.dir/src/StringOps.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/BarcodeReader.dir/src/StringOps.c.o -MF CMakeFiles/BarcodeReader.dir/src/StringOps.c.o.d -o CMakeFiles/BarcodeReader.dir/src/StringOps.c.o -c /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/StringOps.c
+
+CMakeFiles/BarcodeReader.dir/src/StringOps.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/BarcodeReader.dir/src/StringOps.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/StringOps.c > CMakeFiles/BarcodeReader.dir/src/StringOps.c.i
+
+CMakeFiles/BarcodeReader.dir/src/StringOps.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/BarcodeReader.dir/src/StringOps.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/StringOps.c -o CMakeFiles/BarcodeReader.dir/src/StringOps.c.s
 
 CMakeFiles/BarcodeReader.dir/src/Vector.c.o: CMakeFiles/BarcodeReader.dir/flags.make
 CMakeFiles/BarcodeReader.dir/src/Vector.c.o: ../src/Vector.c
@@ -170,22 +170,22 @@ CMakeFiles/BarcodeReader.dir/src/Vector.c.s: cmake_force
 # Object files for target BarcodeReader
 BarcodeReader_OBJECTS = \
 "CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o" \
-"CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o" \
 "CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o" \
-"CMakeFiles/BarcodeReader.dir/src/FileParser.c.o" \
+"CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o" \
 "CMakeFiles/BarcodeReader.dir/src/main.c.o" \
 "CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o" \
+"CMakeFiles/BarcodeReader.dir/src/StringOps.c.o" \
 "CMakeFiles/BarcodeReader.dir/src/Vector.c.o"
 
 # External object files for target BarcodeReader
 BarcodeReader_EXTERNAL_OBJECTS =
 
 BarcodeReader: CMakeFiles/BarcodeReader.dir/src/BarcodeDecoder.c.o
-BarcodeReader: CMakeFiles/BarcodeReader.dir/src/BarcodeOps.c.o
 BarcodeReader: CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o
-BarcodeReader: CMakeFiles/BarcodeReader.dir/src/FileParser.c.o
+BarcodeReader: CMakeFiles/BarcodeReader.dir/src/BarcodeValidation.c.o
 BarcodeReader: CMakeFiles/BarcodeReader.dir/src/main.c.o
 BarcodeReader: CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o
+BarcodeReader: CMakeFiles/BarcodeReader.dir/src/StringOps.c.o
 BarcodeReader: CMakeFiles/BarcodeReader.dir/src/Vector.c.o
 BarcodeReader: CMakeFiles/BarcodeReader.dir/build.make
 BarcodeReader: CMakeFiles/BarcodeReader.dir/link.txt

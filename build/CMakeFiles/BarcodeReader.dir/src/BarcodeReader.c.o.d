@@ -56,6 +56,6 @@ CMakeFiles/BarcodeReader.dir/src/BarcodeReader.c.o: \
  /usr/include/x86_64-linux-gnu/asm/errno.h \
  /usr/include/asm-generic/errno.h /usr/include/asm-generic/errno-base.h \
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Defines.h \
+ /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Defines.h \
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Vector.h \
- /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h \
- /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Defines.h
+ /usr/lib/gcc/x86_64-linux-gnu/9/include/stdbool.h

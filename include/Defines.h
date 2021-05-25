@@ -1,8 +1,7 @@
 #ifndef _DEFINES_H_
 #define _DEFINES_H_
 
-#define INPUT_FILE_FORMAT "%f "
-#define MAX_FLOAT_CHAR 5
+#define INPUT_FORMAT "%f "
 #define INITIAL_CAPACITY 50
 
 #define BC_ONE_UNIT_SIZE 5
@@ -21,11 +20,5 @@
 #define NINE        "10000"
 #define DASH_TEN    "00100"
 #define START_STOP  "00110"
-
-
-// char *legend[TABLE_SIZE] = {
-//     ZERO,   ONE,    TWO,    THREE,  FOUR,       FIVE,
-//     SIX,    SEVEN,  EIGHT,  NINE,   DASH_TEN,   START_STOP
-// };
 
 #endif /* _DEFINES_H_ */

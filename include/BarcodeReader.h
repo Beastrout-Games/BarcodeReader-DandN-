@@ -4,8 +4,14 @@
 #include <stdlib.h>
 #include <string.h>
 #include <errno.h>
+#include "Defines.h"
 
-void printBarCode (int * decoded, int size);
-char* signalDecoder(char* signalBC);
+/**
+ * @brief Reads the light signal from the standart input and returns it in string format
+ * 
+ * @param sizeOfInput The size of the barcode
+ * @return char* 
+ */
+char* signalReader(int sizeOfInput);
 
 #endif /* BARCODEREADER_H */

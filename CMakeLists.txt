@@ -12,20 +12,20 @@ set(SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 add_executable(
     ${PROJECT_NAME}
         ${INC_DIR}/BarcodeDecoder.h
-        ${INC_DIR}/BarcodeOps.h
         ${INC_DIR}/BarcodeReader.h
+        ${INC_DIR}/BarcodeValidation.h
         ${INC_DIR}/Defines.h
-        ${INC_DIR}/FileParser.h
         ${INC_DIR}/MatrixOps.h
         ${INC_DIR}/PublicAPI.h
+        ${INC_DIR}/StringOps.h
         ${INC_DIR}/Vector.h
         
         ${SRC_DIR}/BarcodeDecoder.c
-        ${SRC_DIR}/BarcodeOps.c
         ${SRC_DIR}/BarcodeReader.c
-        ${SRC_DIR}/FileParser.c
+        ${SRC_DIR}/BarcodeValidation.c
         ${SRC_DIR}/main.c
         ${SRC_DIR}/MatrixOps.c
+        ${SRC_DIR}/StringOps.c
         ${SRC_DIR}/Vector.c
     )
 
