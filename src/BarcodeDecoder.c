@@ -1,5 +1,12 @@
 #include "BarcodeDecoder.h"
 
+/**
+ * @brief Removes the start/stop and control characters from the bar code in order to verify it against those
+ * 
+ * @param decoded Decoded bar code string
+ * @param size Length of the bar code string
+ * @param pureBC barcode string w/o the control characters and start/stop signals
+ */
 static void getCleanCode(int* decoded, int size, int** pureBC) {
 	for (int i = 1; i < size - 3; i++) {
 		(*pureBC)[i - 1] = decoded[i];

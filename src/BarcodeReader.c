@@ -5,7 +5,7 @@
 char* signalDecoder(char* signalBC) {
     Vector rawSignal = {NULL, 0, 0};
     Vector decodedSignal = {NULL, 0, 0};
-    size_t stringLength = strlen(signalBC);
+    __uint8_t stringLength = strlen(signalBC);
     vectorInit(&rawSignal, stringLength);
     vectorInit(&decodedSignal, INITIAL_CAPACITY);
     int i = 0;

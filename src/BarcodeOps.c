@@ -2,20 +2,22 @@
 
 int barcodeTranslate(const char* fileName) {
     FILE* barCodeFile = NULL;
-    char* sbc;
-    int * dbc;
+    char* inputBC;
+    char* translatedBC;
+    int * decodedBC;
     
     barCodeFile = fileLoader(fileName);
-    sbc = signalReader(barCodeFile);
-    sbc = signalDecoder(sbc);
-    dbc = decodeNumbers(sbc);
+    inputBC = signalReader(barCodeFile);
+    translatedBC = signalDecoder(inputBC);
+    decodedBC = decodeNumbers(translatedBC);
     
-    if (dbc[0]==6) {
-        sbc = reverseStr(sbc);
-        dbc = decodeNumbers(sbc);
+    if (decodedBC[0]==6) {
+        translatedBC = reverseStr(translatedBC);
+        decodedBC = decodeNumbers(inputBC);
     }
 
-    free (dbc);
-    free (sbc);
+    free (decodedBC);
+    free (inputBC);
+    free (translatedBC);
     return 0;
 }
