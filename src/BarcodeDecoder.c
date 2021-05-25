@@ -67,7 +67,6 @@ int *decodeNumbers(char *code) {
         ZERO, ONE, TWO, THREE, FOUR, FIVE,
         SIX, SEVEN, EIGHT, NINE, DASH_TEN, START_STOP};
 
-    //after start/stop are removed
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < TABLE_SIZE; j++) {
             if (strcmp(slicedCode[i], table[j]) == 0) {

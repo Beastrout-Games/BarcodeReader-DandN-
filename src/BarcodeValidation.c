@@ -75,9 +75,8 @@ static bool checkSumValidation(int* decoded, int size) {
 	}
 }
 
-
 int isValidCode(int* decoded, int size) {
-	if (decoded[0] == 11 && decoded[size - 1] == 11) {
+	if (decoded[0] == 11 && decoded[size - 1] == 11 && size > 1) {
 		if (checkSumValidation(decoded, size)) {
 			printf("Bar-code is correctly scanned!\n");
 			return VALID_CODE;

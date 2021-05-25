@@ -5,15 +5,16 @@
  */
 void sliceString(char* code, char** slicedCode, int size) {
 	char cut[BC_STRING_UNIT_SIZE];
+	static int k = 0;
 
 	for (int i = 0; i < size; i++) {
 		for (int j = 0; j < BC_ONE_UNIT_SIZE; j++) {
-			static int k = 0;
 			cut[j] = code[k++];
 		}
 		cut[BC_STRING_UNIT_SIZE - 1] = '\0';
 		strncpy(slicedCode[i], cut, BC_STRING_UNIT_SIZE);
 	}
+	k = 0;
 }
 
 /**

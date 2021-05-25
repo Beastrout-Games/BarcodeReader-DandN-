@@ -9,6 +9,8 @@
 #include "Defines.h"
 #include "MatrixOps.h"
 
+#define REVERSED_START_STOP 6
+
 /**
  * @brief Inital barcode decoder. Returns the decoded barcode string
  * 
