@@ -90,7 +90,7 @@ int isValidCode(int* decoded, int size) {
 void printErrorStatus(int errnum) {
 	switch (errnum) {
 		case CHECKSUM_ERR:
-			printf("Checksum characters are not scanned/missing!\n");
+			printf("Checksum characters are incorrect/missing!\n");
 			break;
 
 		case LEFT_SIDE_ERR:
