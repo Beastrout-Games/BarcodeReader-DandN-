@@ -89,6 +89,7 @@ char* signalReader(int sizeOfInput) {
 		}
 	}
 
+	free(numArr);
 	inputString[sizeOfInput] = '\0'; 
 	return inputString;
 }

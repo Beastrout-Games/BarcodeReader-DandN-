@@ -254,7 +254,14 @@ CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o: ../src/MatrixOps.c \
   /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
   /usr/include/alloca.h \
   /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
-  ../include/MatrixOps.h
+  ../include/MatrixOps.h \
+  ../include/Defines.h \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h
 
 CMakeFiles/BarcodeReader.dir/src/StringOps.c.o: ../src/StringOps.c \
   /usr/include/stdc-predef.h \
@@ -314,7 +321,13 @@ CMakeFiles/BarcodeReader.dir/src/StringOps.c.o: ../src/StringOps.c \
   /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
   /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
   /usr/include/strings.h \
-  ../include/Defines.h
+  ../include/Defines.h \
+  /usr/include/errno.h \
+  /usr/include/x86_64-linux-gnu/bits/errno.h \
+  /usr/include/linux/errno.h \
+  /usr/include/x86_64-linux-gnu/asm/errno.h \
+  /usr/include/asm-generic/errno.h \
+  /usr/include/asm-generic/errno-base.h
 
 CMakeFiles/BarcodeReader.dir/src/Vector.c.o: ../src/Vector.c \
   /usr/include/stdc-predef.h \

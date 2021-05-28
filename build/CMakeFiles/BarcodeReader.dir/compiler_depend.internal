@@ -259,6 +259,13 @@ CMakeFiles/BarcodeReader.dir/src/MatrixOps.c.o
  /usr/include/alloca.h
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/MatrixOps.h
+ /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Defines.h
+ /usr/include/errno.h
+ /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/linux/errno.h
+ /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/errno-base.h
 
 CMakeFiles/BarcodeReader.dir/src/StringOps.c.o
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/StringOps.c
@@ -320,6 +327,12 @@ CMakeFiles/BarcodeReader.dir/src/StringOps.c.o
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h
  /usr/include/strings.h
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/include/Defines.h
+ /usr/include/errno.h
+ /usr/include/x86_64-linux-gnu/bits/errno.h
+ /usr/include/linux/errno.h
+ /usr/include/x86_64-linux-gnu/asm/errno.h
+ /usr/include/asm-generic/errno.h
+ /usr/include/asm-generic/errno-base.h
 
 CMakeFiles/BarcodeReader.dir/src/Vector.c.o
  /home/nikolay/Desktop/TeaTImeProd/BarcodeReader-DandN-/src/Vector.c
