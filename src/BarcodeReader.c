@@ -6,41 +6,51 @@ static char noiseResolve(float* bufferString, char* inputString, int currIndex) 
 	float leftDiff, rightDiff;
 	char next, prev;
 
-	leftDiff = bufferString[currIndex - 1] - bufferString[currIndex];
-	if(inputString[currIndex + 1] == 'e') {
-		next = inputString[currIndex + 2];
-		rightDiff = bufferString[currIndex + 2] - bufferString[currIndex];
-	}
-	else {
-		next = inputString[currIndex + 1];
-		rightDiff = bufferString[currIndex + 1] - bufferString[currIndex];
-	}
 	prev = inputString[currIndex - 1];
+	leftDiff = bufferString[currIndex - 1] - bufferString[currIndex];
+	
+	switch (inputString[currIndex + 1]){
+		case 'e':
+			next = inputString[currIndex + 2];
+			rightDiff = bufferString[currIndex + 2] - bufferString[currIndex];
+			break;
 
-	if (prev == '0' && next == '0') {
-		return '1';
-    }
-    
-	if (prev == '1' && next == '1' ) {
-		return '0';
-    }
+		default:
+			next = inputString[currIndex + 1];
+			rightDiff = bufferString[currIndex + 1] - bufferString[currIndex];
+			break;
+	}
 
-    if (prev == '0' && next == '1' ) {
-        if(leftDiff < rightDiff) {
-			return '0';
-		}
-		else {
-			return '1';
-		}
-    }
-    else if (prev == '1' && next == '0' ) {
-		if(leftDiff < rightDiff) {
-			return '1';
-		}
-		else {
-			return '0';
-		}
-    }
+
+	switch (prev) {
+		case '0':
+			if (next == '0'){
+				return '1';
+			} 
+			else {
+				if(leftDiff < rightDiff) {
+					return '0';
+				} 
+				else {
+					return '1';
+				}
+			}
+			break;
+		
+		case '1':
+			if (next == '1') {
+				return '0';
+			}
+			else {
+				if(leftDiff < rightDiff) {
+					return '1';
+				}
+				else {
+					return '0';
+				}
+			}
+			break;
+	}
 }
 
 char* signalReader(int sizeOfInput) {
