@@ -11,7 +11,11 @@ char *signalDecoder(char *signalBC)
 
     stringLength = strlen(signalBC);
     vectorInit(&rawSignal, stringLength);
+    CHECK_ALLOCATION_ERR(rawSignal.items);
+
     vectorInit(&decodedSignal, INITIAL_CAPACITY);
+    CHECK_ALLOCATION_ERR(decodedSignal.items);
+
     int i = 0;
     while (signalBC[i] != '\0') {
         do {
@@ -50,6 +54,8 @@ char *signalDecoder(char *signalBC)
 
     char *tempString = NULL;
     tempString = (char *)malloc(sizeof(char *) * (stringLength + 1));
+    CHECK_ALLOCATION_ERR(tempString);
+
     strncpy(tempString, decodedSignal.items, stringLength);
     vectorFree(&rawSignal);
     vectorFree(&decodedSignal);
@@ -59,8 +65,13 @@ char *signalDecoder(char *signalBC)
 int *decodeNumbers(char *code) {
     int size = strlen(code) / BC_ONE_UNIT_SIZE;
     char **slicedCode = NULL;
+
     int *decodedNumbers = (int *)malloc(size * sizeof(int));
+    CHECK_ALLOCATION_ERR(decodeNumbers);
+
     slicedCode = (char **)matrixInit(size, BC_STRING_UNIT_SIZE);
+    CHECK_ALLOCATION_ERR(slicedCode);
+
     sliceString(code, slicedCode, size);
 
     char *table[TABLE_SIZE] = {

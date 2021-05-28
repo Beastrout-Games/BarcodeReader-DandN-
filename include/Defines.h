@@ -8,6 +8,13 @@
 #define BC_STRING_UNIT_SIZE 6
 #define TABLE_SIZE 12
 
+#include <errno.h>
+#define CHECK_ALLOCATION_ERR(ptr) \
+            if ((ptr) == NULL) { \
+                printf("Failed to allocate memory.\n"); \
+                exit(ENOMEM); \
+            }
+
 #define ZERO        "00001"
 #define ONE         "10001"
 #define TWO         "01001"

@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "MatrixOps.h"
+#include "Defines.h"
 
 void* matrixInit(int rows, int cols) {
     void **baseMatrix = calloc(rows, sizeof(int *));
+    CHECK_ALLOCATION_ERR(baseMatrix);
+
     for (int i = 0; i < rows; i++) {
         baseMatrix[i] = calloc(cols, sizeof(int *));
+        CHECK_ALLOCATION_ERR(baseMatrix[i]);
+
     }
     return baseMatrix;
 }

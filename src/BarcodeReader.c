@@ -57,11 +57,10 @@ char* signalReader(int sizeOfInput) {
 	char* inputString = NULL;
 
 	inputString = (char*)malloc((sizeOfInput + 1) * sizeof(char));
-	if (inputString == NULL){
-		printf("Could not allocate memory!\n");
-        exit(ENOMEM);
-	}
+	CHECK_ALLOCATION_ERR(inputString);
+
 	float* numArr = (float*)malloc(sizeOfInput * sizeof(float));
+	CHECK_ALLOCATION_ERR(numArr);
 
 	float d = 0.0;
 	for(int i = 0; i < sizeOfInput-1; i++) {

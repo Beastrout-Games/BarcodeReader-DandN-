@@ -24,6 +24,8 @@ char* reverseStr(char* string) {
     int i, j = 0;
 	int len = strlen(string);
 	char* tempString = (char*)malloc((len + 1)*sizeof(char));
+	CHECK_ALLOCATION_ERR(tempString);
+
     for(i = len - 1, j = 0; i >= 0; i--, j++) {
         tempString[j] = string[i];
     }

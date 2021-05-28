@@ -46,6 +46,7 @@ bool vectorIsEmpty(Vector *vec)
 void vectorResize(Vector *vec, size_t capacity)
 {
   char *items = realloc(vec->items, sizeof(char) * capacity);
+  CHECK_ALLOCATION_ERR(items);
   if (items)
   {
     vec->items = items;
