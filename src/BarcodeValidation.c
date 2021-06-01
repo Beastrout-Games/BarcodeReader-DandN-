@@ -85,6 +85,7 @@ int isValidCode(int* decoded, int size) {
 	}
 	else if (decoded[0] != 11) { return LEFT_SIDE_ERR;}
 	else if (decoded[size] != 11) { return RIGHT_SIZE_ERR;}
+	else { return GENERAL_ERROR;}
 }
 
 void printErrorStatus(int errnum) {
@@ -99,6 +100,14 @@ void printErrorStatus(int errnum) {
 		
 		case RIGHT_SIZE_ERR:
 			printf("Barcode truncated. Move the scanner to the right.\n");
+			break;
+		
+		case GENERAL_ERROR:
+			printf("Something went wrong! Please restart app and check your barcode!\n");
+			break;
+
+		default:
+			printf(" :) BSOD");
 			break;
 	}
 	exit(errnum);

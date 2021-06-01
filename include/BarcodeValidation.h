@@ -11,6 +11,7 @@
 #define CHECKSUM_ERR 2
 #define LEFT_SIDE_ERR 3
 #define RIGHT_SIZE_ERR 4
+#define GENERAL_ERROR 5
 
 /**
  * @brief Makes all the validations to determine if the barcode is valid

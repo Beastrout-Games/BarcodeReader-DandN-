@@ -21,7 +21,6 @@ static char noiseResolve(float* bufferString, char* inputString, int currIndex) 
 			break;
 	}
 
-
 	switch (prev) {
 		case '0':
 			if (next == '0'){
@@ -49,6 +48,11 @@ static char noiseResolve(float* bufferString, char* inputString, int currIndex) 
 					return '0';
 				}
 			}
+			break;
+		
+		default:
+			printf("Encountered invalid character! Exiting!");
+			exit(1);
 			break;
 	}
 }

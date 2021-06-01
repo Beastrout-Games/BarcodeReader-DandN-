@@ -5,11 +5,12 @@
 
 char *signalDecoder(char *signalBC)
 {
+    char* lightsSignal = signalBC;
     Vector rawSignal = {NULL, 0, 0};
     Vector decodedSignal = {NULL, 0, 0};
     __uint8_t stringLength = 0;
 
-    stringLength = strlen(signalBC);
+    stringLength = strlen(lightsSignal);
     vectorInit(&rawSignal, stringLength);
     CHECK_ALLOCATION_ERR(rawSignal.items);
 
@@ -17,11 +18,11 @@ char *signalDecoder(char *signalBC)
     CHECK_ALLOCATION_ERR(decodedSignal.items);
 
     int i = 0;
-    while (signalBC[i] != '\0') {
+    while (lightsSignal[i] != '\0') {
         do {
-            vectorPush(&rawSignal, signalBC[i]);
+            vectorPush(&rawSignal, lightsSignal[i]);
             i++;
-        } while (vectorBack(&rawSignal) == signalBC[i]);
+        } while (vectorBack(&rawSignal) == lightsSignal[i]);
 
         switch (vectorBack(&rawSignal)) {
         case '1':

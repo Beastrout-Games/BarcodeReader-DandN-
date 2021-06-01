@@ -13,10 +13,12 @@ int main(void){
     inputBC = signalReader(sizeOfCode);
 
     translatedBC = signalDecoder(inputBC);
+    decodedBC = decodeNumbers(translatedBC);
     free (inputBC);
 
-    decodedBC = decodeNumbers(translatedBC);
     if (decodedBC[0] == REVERSED_START_STOP) {
+        //free(translatedBC);
+        free(decodedBC);
         translatedBC = reverseStr(translatedBC);
         decodedBC = decodeNumbers(translatedBC);
     }
